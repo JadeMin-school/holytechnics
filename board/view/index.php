@@ -2,9 +2,7 @@
 <html>
 	<head>
 		<?php
-			mb_internal_encoding('UTF-8');
-			mb_http_output('UTF-8');
-			$pdo = new PDO("mysql:host=localhost;dbname=hello;charset=utf8mb4", "root", "");
+			$pdo = new PDO("mysql:host=localhost;dbname=hello", "root", "");
 
 			$stmt = $pdo->prepare("SELECT * FROM board WHERE id = :id");
 			$stmt->bindValue(":id", $_GET["id"]);
