@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		
-		<link type="text/css" rel="stylesheet" href="index.css"/>
-
 		<?php
-			$pdo = new PDO("mysql:host=localhost;dbname=hello", "root", "");
+			mb_internal_encoding('UTF-8');
+			mb_http_output('UTF-8');
+			$pdo = new PDO("mysql:host=localhost;dbname=hello;charset=utf8mb4", "root", "");
 
 			$stmt = $pdo->prepare("SELECT * FROM board WHERE id = :id");
 			$stmt->bindValue(":id", $_GET["id"]);
@@ -29,6 +26,14 @@
 			$stmt->bindValue(":id", $id);
 			$stmt->execute();
 		?>
+
+
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description" content="<?=$content?>"/>
+		<meta name="author" content="<?=$writerName?>"/>
+		
+		<link type="text/css" rel="stylesheet" href="index.css"/>
 
 		<title><?=$title?></title>
 	</head>
