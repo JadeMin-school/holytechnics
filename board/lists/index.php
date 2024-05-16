@@ -3,8 +3,9 @@
 	<head>
 		<?php require_once("../../lib/db.php"); ?>
 		<?php
-			$stmt = $pdo->prepare("SELECT * FROM board ORDER BY id DESC");
-			$stmt->execute();
+			$DB = new GalleryDB();
+
+			$LIST = $DB->getPostList();
 		?>
 
 
@@ -36,42 +37,26 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php
-						while ($row = $stmt->fetch(PDO::FETCH_ASSOC)):
-							$id = $row["id"];
-							$title = $row["title"];
-							$writerName = $row["writerName"];
-							$writerIP = $row["writerIP"];
-							$views = $row["views"];
-							$timestamp = $row["timestamp"];
-					?>
+					<?php foreach ($LIST as $d) { ?>
 						<tr class="post">
 							<td class="id">
-								<?=$id?>
+								<?=$d["id"]?>
 							</td>
 							<td class="title">
-								<a href="../view?id=<?=$id?>">
-									<?=$title?>
-								</a>
+								<a href="../view?id=<?=$d["id"]?>"><?=$d["title"]?></a>
 							</td>
 							<td class="writer">
-								<span class="nickname">
-									<?=$writerName?>
-								</span>
-								<span class="ip">
-									(<?=$writerIP?>)
-								</span>
+								<span class="nickname"><?=$d["writerName"]?></span>
+								<span class="ip">(<?=$d["writerIP"]?>)</span>
 							</td>
 							<td class="timestamp">
-								<time datetime="<?=$timestamp?>">
-									<?=$timestamp?>
-								</time>
+								<time datetime="<?=$d["timestamp"]?>"><?=$d["timestamp"]?></time>
 							</td>
 							<td class="views">
-								<?=$views?>
+								<?=$d["views"]?>
 							</td>
 						</tr>
-					<?php endwhile; ?>
+					<?php } ?>
 				</tbody>
 			</table>
 		</main>

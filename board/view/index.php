@@ -3,59 +3,46 @@
 	<head>
 		<?php require_once("../../lib/db.php"); ?>
 		<?php
-			$stmt = $pdo->prepare("SELECT * FROM board WHERE id = :id LIMIT 50");
-			$stmt->bindValue(":id", $_GET["id"]);
-			$stmt->execute();
+			$DB = new GalleryDB();
 
-			$BOARD = $stmt->fetch();
-			$id = $BOARD["id"];
-			$title = $BOARD["title"];
-			$content = $BOARD["content"];
-			$writerName = $BOARD["writerName"];
-			$writerIP = $BOARD["writerIP"];
-			$views = $BOARD["views"];
-			$timestamp = $BOARD["timestamp"];
-		?>
+			$DB->incrementView($_GET["id"]);
 
-		<?php
-			$stmt = $pdo->prepare("UPDATE board SET views = views + 1 WHERE id = :id");
-			$stmt->bindValue(":id", $id);
-			$stmt->execute();
+			$d = $DB->getPost($_GET["id"]);
 		?>
 
 
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta name="description" content="<?=$content?>"/>
-		<meta name="author" content="<?=$writerName?>"/>
+		<meta name="description" content="<?=$d["content"]?>"/>
+		<meta name="author" content="<?=$d["writerName"] . "(" . $d["writerIP"] . ")"?>"/>
 		
 		<link type="text/css" rel="stylesheet" href="index.css"/>
 
-		<title><?=$title?></title>
+		<title><?=$d["title"]?></title>
 	</head>
 	<body>
 		<main id="main_content">
 			<article id="post_view">
 				<header>
 					<h1 id="title">
-						<?=$title?>
+						<?=$d["title"]?>
 					</h1>
 					<div id="info">
 						<div id="fl">
 							<span class="nickname">
-								<?=$writerName?>
+								<?=$d["writerName"]?>
 							</span>
 							<span class="ip">
-								(<?=$writerIP?>)
+								(<?=$d["writerIP"]?>)
 							</span>
-							<time class="timestamp" datetime="<?=$timestamp?>">
-								<?=$timestamp?> 
+							<time class="timestamp" datetime="<?=$d["timestamp"]?>">
+								<?=$d["timestamp"]?> 
 							</time>
 						</div>
 					</div>
 				</header>
 				<div id="content">
-					<?=$content?>
+					<?=$d["content"]?>
 				</div>
 			</article>
 		</main>
