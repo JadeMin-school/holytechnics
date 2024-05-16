@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<?php require_once("../../lib/db.php"); ?>
 		<?php
-			$pdo = new PDO("mysql:host=localhost;dbname=hello", "root", "");
-
 			$stmt = $pdo->prepare("SELECT * FROM board ORDER BY id DESC");
 			$stmt->execute();
 		?>
@@ -12,7 +11,6 @@
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="description" content="<?=$content?>"/>
-		<meta name="author" content="<?=$writerName?>"/>
 
 		<link type="text/css" rel="stylesheet" href="index.css"/>
 

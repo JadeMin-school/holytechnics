@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<?php require_once("../../lib/db.php"); ?>
 		<?php
-			$pdo = new PDO("mysql:host=localhost;dbname=hello", "root", "");
-
-			$stmt = $pdo->prepare("SELECT * FROM board WHERE id = :id");
+			$stmt = $pdo->prepare("SELECT * FROM board WHERE id = :id LIMIT 50");
 			$stmt->bindValue(":id", $_GET["id"]);
 			$stmt->execute();
+
 			$BOARD = $stmt->fetch();
-		?>
-		<?php
 			$id = $BOARD["id"];
 			$title = $BOARD["title"];
 			$content = $BOARD["content"];
