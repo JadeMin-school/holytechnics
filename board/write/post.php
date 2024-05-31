@@ -1,19 +1,19 @@
+<?php require_once("../../lib/db.php"); ?>
+<?php
+	$DB = new GalleryDB();
+
+	$ID = $DB->writePost(
+		$_POST["title"],
+		$_POST["content"],
+		$_POST["writerName"],
+		$_SERVER["REMOTE_ADDR"]
+	);
+?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php require_once("../../lib/db.php"); ?>
-		<?php
-			$DB = new GalleryDB();
-
-			$ID = $DB->writePost(
-				$_POST["title"],
-				$_POST["content"],
-				$_POST["writerName"],
-				$_SERVER["REMOTE_ADDR"]
-			);
-		?>
-
-
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -23,5 +23,6 @@
 		</script>
 	</head>
 	<body>
+		
 	</body>
 </html>

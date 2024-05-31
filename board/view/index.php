@@ -1,20 +1,20 @@
+<?php require_once("../../lib/db.php"); ?>
+<?php
+	$DB = new GalleryDB();
+
+	$DB->incrementView($_GET["id"]);
+
+	$d = $DB->getPost($_GET["id"]);
+?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<?php require_once("../../lib/db.php"); ?>
-		<?php
-			$DB = new GalleryDB();
-
-			$DB->incrementView($_GET["id"]);
-
-			$d = $DB->getPost($_GET["id"]);
-		?>
-
-
 		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta name="description" content="<?=$d["content"]?>"/>
-		<meta name="author" content="<?=$d["writerName"] . "(" . $d["writerIP"] . ")"?>"/>
+		<meta name="author" content="<?=$d["writerName"]?>(<?=$d["writerIP"]?>)"/>
 		
 		<link type="text/css" rel="stylesheet" href="index.css"/>
 
