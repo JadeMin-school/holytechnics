@@ -7,6 +7,7 @@ import {
 } from 'react-icons/fa';
 
 import { randomKeyword } from "./randomKeyword.ts";
+import CONFIG from "@/config/config.mjs";
 
 import logo from "@/public/logo.png";
 
@@ -18,7 +19,7 @@ export default function Navbar() {
 	return (
 		<nav>
 			<div id="logo">
-				<Link href="/">
+				<Link href={CONFIG.URL}>
 					<img
 						src={logo.src}
 						alt="Logo"

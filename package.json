@@ -1,5 +1,4 @@
 {
-	"homepage": "/holytechnics",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
