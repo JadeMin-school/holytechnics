@@ -21,7 +21,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: "gh-pages"
   cancel-in-progress: true
 
 jobs:
@@ -42,18 +42,18 @@ jobs:
         with:
           version: 9
 
-
       - name: Setup caches
         uses: actions/cache@v4
         with:
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
-          key: ${{ runner.os }}-caches-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
+            ${{ runner.os }}-caches-
+          key: ${{ runner.os }}-caches-${{ hashFiles('**/pnpm-lock.yaml') }}
           path: |
+            ${{ env.PNPM_HOME }}/store
             .next/cache
 
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm install
       
       - name: Build with Next.js
         run: pnpm run build
