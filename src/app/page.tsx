@@ -13,7 +13,7 @@ interface Post {
 
 export default async function Home(): Promise<JSX.Element> {
 	const result: Response = await fetch("https://jsonplaceholder.typicode.com/posts");
-	const data: Post[] = await result.json(); 
+	const data: Post[] = await result.json();
 
 	return (
 		<main>
