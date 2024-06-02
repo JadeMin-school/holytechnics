@@ -8,7 +8,7 @@ export default function Providers(
 	}: Readonly<{
 		children: React.ReactNode;
 	}>
-): JSX.Element {
+) {
 	return (
 		<>
 			{ children }

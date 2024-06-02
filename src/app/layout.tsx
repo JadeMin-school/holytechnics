@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
 
 
@@ -13,7 +13,7 @@ export default function RootLayout(
 	}: Readonly<{
 		children: React.ReactNode;
 	}>
-): JSX.Element {
+) {
 	return (
 		<html lang="ko">
 			<body>
