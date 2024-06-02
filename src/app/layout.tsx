@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
 
+import Providers from "./providers";
+
+import "./global.css";
+
 
 
 export const metadata: Metadata = {
-	title: "한국폴리텍 정보 서비스",
-	description: "한국폴리텍 실시간 정보 서비스",
+	title: "인천폴리텍 정보 서비스",
+	description: "인천폴리텍 실시간 정보 서비스",
 };
 
 export default function RootLayout(
@@ -17,7 +21,9 @@ export default function RootLayout(
 	return (
 		<html lang="ko">
 			<body>
-				{ children }
+				<Providers>
+					{ children }
+				</Providers>
 			</body>
 		</html>
 	);
