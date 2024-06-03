@@ -9,8 +9,8 @@ export default function Footer() {
 		<footer>
 			<div id="link">
 				<Link href="/privacy">개인정보처리방침</Link>
-				<div className="divider">|</div>
-				<Link href="/service">서비스소개</Link>
+				{/* <div className="divider">|</div>
+				<Link href="/service">서비스소개</Link> */}
 			</div>
 			<div id="note">
 				<span>

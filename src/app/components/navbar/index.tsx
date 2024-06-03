@@ -6,8 +6,8 @@ import {
 	FaUserCircle, FaSignInAlt, FaUserPlus
 } from 'react-icons/fa';
 
-import { randomKeyword } from "./randomKeyword.ts";
 import CONFIG from "@/config/config.mjs";
+import { randomKeyword } from "./randomKeyword.ts";
 
 import logo from "@/public/logo.png";
 
@@ -37,7 +37,7 @@ export default function Navbar() {
 					placeholder={randomKeyword()}
 				/>
 				<button type="submit">
-					<FaSearch size={20}/>
+					<FaSearch size={22}/>
 				</button>
 			</form>
 

@@ -7,7 +7,7 @@ export default async function Home() {
 	return (
 		<main>
 			<Navbar/>
-			
+				<h1>메인 페이지</h1>
 			<Footer/>
 		</main>
 	);

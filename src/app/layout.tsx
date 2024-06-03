@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import Providers from "./providers";
+import Providers from "./components/providers";
 
 import "./global.css";
 
