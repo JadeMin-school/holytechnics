@@ -7,7 +7,8 @@ const prefix = process.env.NODE_ENV === "production" ? CONFIG.URL : '';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	output: "export",
-	assetPrefix: prefix,
+	
+	basePath: prefix,
 };
 
 export default nextConfig;

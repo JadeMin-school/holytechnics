@@ -19,7 +19,7 @@ export default function Navbar() {
 	return (
 		<nav>
 			<div id="logo">
-				<Link href={CONFIG.URL}>
+				<Link href="/">
 					<img
 						src={logo.src}
 						alt="Logo"
