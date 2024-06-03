@@ -46,7 +46,7 @@ jobs:
         uses: actions/cache@v4
         with:
           restore-keys: |
-            ${{ runner.os }}-caches-
+            ${{ runner.os }}-caches-${{ hashFiles('**/pnpm-lock.yaml') }}
           key: ${{ runner.os }}-caches-${{ hashFiles('**/pnpm-lock.yaml') }}
           path: |
             ${{ env.PNPM_HOME }}/store

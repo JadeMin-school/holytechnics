@@ -1,14 +1,11 @@
-import CONFIG from "./src/config/config.mjs";
-
-
-
-const prefix = process.env.NODE_ENV === "production" ? CONFIG.URL : '';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	output: "export",
+
+	basePath: "/holytechnics",
 	
-	basePath: prefix,
+	// 에셋 압축용 sharp 패키지 설치하기 귀찮아...
+	compress: false,
 };
 
 export default nextConfig;
