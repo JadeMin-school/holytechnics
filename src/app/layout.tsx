@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 
 import Providers from "./components/providers";
 
+import "./global.css";
+
 
 
 export const metadata: Metadata = {
 	title: "인천폴리텍 정보 서비스",
-	description: "인천폴리텍 실시간 정보 서비스",
+	description: "인천폴리텍 정보 서비스",
 };
 
 export default function RootLayout(

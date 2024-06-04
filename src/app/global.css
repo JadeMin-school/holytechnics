@@ -11,9 +11,8 @@ body {
 	input, textarea, button {
 		font-family: "Noto Sans KR", sans-serif;
 	}
-}
 
-
-.divider {
-	margin: 0 7px;
+	.divider {
+		margin: 0 7px;
+	}
 }
