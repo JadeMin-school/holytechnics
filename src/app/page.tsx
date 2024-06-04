@@ -37,7 +37,7 @@ export default async function Home() {
 							/>
 						</div>
 						<div id="description">
-							<span>오늘 날씨는 아주 주옥 같습니다.</span>
+							<span>오늘 날씨는 아주 아름답습니다.</span>
 						</div>
 					</div>
 				</div>
