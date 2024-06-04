@@ -19,7 +19,7 @@ export default function Home() {
 			<main>
 				<div id="content">
 					<div id="next-time">
-						<span>다음 강의 : { "채찍피티" }</span>
+						<span>다음 강의 : { "ChatGPT" }</span>
 					</div>
 					<div id="weather">
 						<div id="icon">
