@@ -43,7 +43,7 @@ export default function Home() {
 				</div>
 				<aside>
 					<div id="hat">
-						<span>구독 중인 알림 <FaCheckCircle color="green"/></span>
+						<span>구독 중인 알림 <FaCheckCircle color="#5FA777"/></span>
 					</div>
 					<div id="shoes">
 						<ul>
