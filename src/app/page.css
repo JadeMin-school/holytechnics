@@ -34,19 +34,19 @@ main {
 				align-items: center;
 	
 				> svg {
-					margin: 0 18px;
+					margin: 10px 20px;
 				}
 			}
-	
+
 			#description {
-				margin-top: 20px;
+				margin-top: 10px;
 			}
 		}
 	}
 	
 	aside {
 		padding-top: 10px;
-		padding-left: 20px;
+		padding-left: 10px;
 
 		width: 250px;
 		height: 400px;
@@ -65,7 +65,7 @@ main {
 		#shoes {
 			padding: 10px;
 
-			height: 103%;
+			height: 102%;
 			
 			border-bottom-right-radius: 5px;
 			border-bottom-left-radius: 5px;
