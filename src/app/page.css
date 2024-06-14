@@ -10,16 +10,18 @@ main {
 		width: 600px;
 		height: 400px;
 
+		padding: 10px 20px 0 0;
+
 		#next-time {
 			padding: 10px;
-			margin: 10px;
+			margin-bottom: 10px;
 
 			background-color: #B8E9FF;
 		}
 		
 		#weather {
 			padding: 10px;
-			margin: 10px;
+			margin-top: 10px;
 
 			height: 100%;
 			
@@ -43,7 +45,8 @@ main {
 	}
 	
 	aside {
-		padding: 10px;
+		padding-top: 10px;
+		padding-left: 20px;
 
 		width: 250px;
 		height: 400px;
@@ -62,7 +65,7 @@ main {
 		#shoes {
 			padding: 10px;
 
-			height: 108%;
+			height: 103%;
 			
 			border-bottom-right-radius: 5px;
 			border-bottom-left-radius: 5px;
