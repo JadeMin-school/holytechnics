@@ -8,7 +8,7 @@ import {
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 
-import "./page.css";
+import styles from "./page.module.css";
 
 
 
@@ -16,7 +16,7 @@ export default function Home() {
 	return (
 		<>
 			<Navbar/>
-			<main>
+			<main className={styles.main}>
 				<div id="content">
 					<div id="next-time">
 						<span>다음 강의 : { "ChatGPT" }</span>
