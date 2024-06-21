@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 import $ from "@/config.json";
 
 import "./index.css";
@@ -10,7 +12,7 @@ export default function Footer() {
 	return (
 		<footer>
 			<div id="link">
-				<a href={`${$.ENTRY_PATH}/privacy`}>개인정보처리방침</a>
+				<Link href="/privacy">개인정보처리방침</Link>
 				{/* <div className="divider">|</div>
 				<Link href="/service">서비스소개</Link> */}
 			</div>

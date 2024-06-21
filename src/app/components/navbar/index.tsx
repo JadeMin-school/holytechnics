@@ -5,12 +5,11 @@ import {
 	FaUserCircle, FaSignInAlt, FaUserPlus
 } from 'react-icons/fa';
 
-import $ from "@/config.json";
+import Link from 'next/link';
 
 import { randomKeyword } from "./randomKeyword.ts";
 
 import logo from "@/public/logo.png";
-
 import "./index.css";
 
 
@@ -19,21 +18,22 @@ export default function Navbar() {
 	return (
 		<nav>
 			<div id="logo">
-				<a href={`${$.ENTRY_PATH}/`}>
+				<Link href="/">
 					<img
 						src={logo.src}
 						alt="Logo"
 					/>
-				</a>
+				</Link>
 			</div>
 
 			<form
 				id="search"
+				role="search"
 				action="/search"
 				onSubmit={e => e.preventDefault()}
 			>
 				<input
-					type="text"
+					type="search"
 					placeholder={randomKeyword()}
 				/>
 				<button type="submit">
@@ -45,13 +45,13 @@ export default function Navbar() {
 				{/* <Link href="/my" id="my">
 					<FaUserCircle size={30}/>
 				</Link> */}
-				<a href={`${$.ENTRY_PATH}/login`} id="login">
+				<Link href="/login" id="login">
 					<FaSignInAlt/> 로그인
-				</a>
+				</Link>
 				<div className="divider">|</div>
-				<a href={`${$.ENTRY_PATH}/register`} id="register">
+				<Link href="/register" id="register">
 					<FaUserPlus/> 회원가입
-				</a>
+				</Link>
 			</div>
 		</nav>
 	);
