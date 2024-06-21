@@ -1,10 +1,11 @@
 'use client';
 
-import Link from 'next/link';
 import {
 	FaSearch,
 	FaUserCircle, FaSignInAlt, FaUserPlus
 } from 'react-icons/fa';
+
+import CONFIG from "@/config.json";
 
 import { randomKeyword } from "./randomKeyword.ts";
 
@@ -18,12 +19,12 @@ export default function Navbar() {
 	return (
 		<nav>
 			<div id="logo">
-				<Link href="/">
+				<a href={`${CONFIG.homepage}/`}>
 					<img
 						src={logo.src}
 						alt="Logo"
 					/>
-				</Link>
+				</a>
 			</div>
 
 			<form
@@ -44,13 +45,13 @@ export default function Navbar() {
 				{/* <Link href="/my" id="my">
 					<FaUserCircle size={30}/>
 				</Link> */}
-				<Link href="/login" id="sigin">
+				<a href={`${CONFIG.homepage}/login`} id="login">
 					<FaSignInAlt/> 로그인
-				</Link>
+				</a>
 				<div className="divider">|</div>
-				<Link href="/register" id="register">
+				<a href={`${CONFIG.homepage}/register`} id="register">
 					<FaUserPlus/> 회원가입
-				</Link>
+				</a>
 			</div>
 		</nav>
 	);
