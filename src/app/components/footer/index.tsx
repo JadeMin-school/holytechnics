@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 
-import $ from "@/config.json";
-
 import "./index.css";
 
 
