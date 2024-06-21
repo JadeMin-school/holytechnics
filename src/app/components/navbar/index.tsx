@@ -5,7 +5,7 @@ import {
 	FaUserCircle, FaSignInAlt, FaUserPlus
 } from 'react-icons/fa';
 
-import CONFIG from "@/config.json";
+import $ from "@/config.json";
 
 import { randomKeyword } from "./randomKeyword.ts";
 
@@ -19,7 +19,7 @@ export default function Navbar() {
 	return (
 		<nav>
 			<div id="logo">
-				<a href={`${CONFIG.homepage}/`}>
+				<a href={`${$.ENTRY_PATH}/`}>
 					<img
 						src={logo.src}
 						alt="Logo"
@@ -45,11 +45,11 @@ export default function Navbar() {
 				{/* <Link href="/my" id="my">
 					<FaUserCircle size={30}/>
 				</Link> */}
-				<a href={`${CONFIG.homepage}/login`} id="login">
+				<a href={`${$.ENTRY_PATH}/login`} id="login">
 					<FaSignInAlt/> 로그인
 				</a>
 				<div className="divider">|</div>
-				<a href={`${CONFIG.homepage}/register`} id="register">
+				<a href={`${$.ENTRY_PATH}/register`} id="register">
 					<FaUserPlus/> 회원가입
 				</a>
 			</div>

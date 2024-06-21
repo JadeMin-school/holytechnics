@@ -1,6 +1,6 @@
 'use client';
 
-import CONFIG from "@/config.json";
+import $ from "@/config.json";
 
 import "./index.css";
 
@@ -10,7 +10,7 @@ export default function Footer() {
 	return (
 		<footer>
 			<div id="link">
-				<a href={`${CONFIG.homepage}/privacy`}>개인정보처리방침</a>
+				<a href={`${$.ENTRY_PATH}/privacy`}>개인정보처리방침</a>
 				{/* <div className="divider">|</div>
 				<Link href="/service">서비스소개</Link> */}
 			</div>
