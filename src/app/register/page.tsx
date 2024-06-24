@@ -9,18 +9,24 @@ import Footer from "@/app/components/footer";
 import "./page.css";
 
 export default function Login() {
+	const [id, setId] = useState("");
 	const [password, setPassword] = useState("");
 	const [passwordCheck, setPasswordCheck] = useState("");
+	const [studentId, setStudentId] = useState("");
 	const [agree, setAgree] = useState(false);
 	const [error, setError] = useState(true);
 
+	const requiredInputs = [id, password, passwordCheck, studentId];
+
 	useEffect(() => {
-		if (password === passwordCheck && agree === true) {
-			setError(false);
-		} else {
-			setError(true);
+		if (!requiredInputs.some(i => i.length === 0)) {
+			if(password === passwordCheck && agree === true) {
+				return setError(false);
+			}
 		}
-	}, [password, passwordCheck, agree]);
+
+		setError(true);
+	}, requiredInputs);
 
 
 	return (
@@ -34,32 +40,32 @@ export default function Login() {
 					onSubmit={e => e.preventDefault()}
 				>
 					<input
-						type="text"
-						placeholder="아이디"
+						type="number"
+						placeholder="학번 (필수)"
 						required={true}
+						value={studentId}
+						onChange={e => setStudentId(e.target.value)}
+					/>
+					<input
+						type="text"
+						placeholder="아이디 (필수)"
+						required={true}
+						value={id}
+						onChange={e => setId(e.target.value)}
 					/>
 					<input
 						type="password"
-						placeholder="비밀번호"
+						placeholder="비밀번호 (필수)"
 						required={true}
 						value={password}
-						onChange={e => {
-							setPassword(e.target.value);
-						}}
+						onChange={e => setPassword(e.target.value)}
 					/>
 					<input
 						type="password"
-						placeholder="비밀번호 확인"
+						placeholder="비밀번호 확인 (필수)"
 						required={true}
 						value={passwordCheck}
-						onChange={e => {
-							setPasswordCheck(e.target.value);
-						}}
-					/>
-					<input
-						type="number"
-						placeholder="학번"
-						required={true}
+						onChange={e => setPasswordCheck(e.target.value)}
 					/>
 					<input
 						type="email"
