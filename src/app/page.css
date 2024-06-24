@@ -1,17 +1,18 @@
 main#main {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: center;
+	align-content: center;
 	justify-content: center;
+	align-items: center;
 
 	margin-top: 10px;
-
-	min-width: 600px;
 
 	#content {
 		width: 520px;
 		height: 300px;
 
-		padding: 10px 20px 0 0;
+		padding: 10px 10px 0 0;
 
 		#next-time {
 			padding: 10px;
@@ -31,6 +32,7 @@ main#main {
 	
 			#icon {
 				display: flex;
+				align-content: center;
 				justify-content: center;
 				align-items: center;
 	
@@ -46,11 +48,10 @@ main#main {
 	}
 	
 	aside {
-		padding-top: 10px;
-		padding-left: 10px;
-
 		width: 220px;
 		height: 300px;
+
+		padding: 10px 0 0 10px;
 	
 		#hat {
 			padding: 10px;

@@ -1,14 +1,19 @@
 nav {
 	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-content: center;
 	justify-content: space-between;
 	align-items: center;
 
-	padding: 14px 30px 14px 30px;
+	padding: 14px 30px;
 
 	background-color: #f5f5f5;
 
 	#logo img {
 		display: flex;
+		align-content: center;
+		justify-content: center;
 		align-items: center;
 
 		width: 60px;
@@ -16,16 +21,18 @@ nav {
 
 	#search {
 		display: flex;
+		align-content: center;
+		justify-content: center;
 		align-items: center;
 
 		input {
 			width: 310px;
 			height: 40px;
 
+			border: 2px solid black;
+			border-right-width: 0;
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
-
-			border-right-width: 0;
 		}
 		button {
 			width: 40px;
@@ -33,9 +40,10 @@ nav {
 
 			background-color: #cdefff;
 
+			border: 2px solid black;
+			border-left-width: 1px;
 			border-top-right-radius: 5px;
 			border-bottom-right-radius: 5px;
-			border-left-width: 1px;
 
 			cursor: pointer;
 
@@ -47,7 +55,14 @@ nav {
 
 	#profile {
 		display: flex;
+		flex-direction: row;
+		align-content: center;
+		justify-content: center;
 		align-items: center;
+
+		svg {
+			margin: 0 auto;
+		}
 	}
 }
 
