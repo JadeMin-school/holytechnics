@@ -1,15 +1,14 @@
 'use client';
 
+import Link from 'next/link';
 import {
 	FaSearch,
 	FaUserCircle, FaSignInAlt, FaUserPlus
 } from 'react-icons/fa';
 
-import Link from 'next/link';
-
 import { randomKeyword } from "./randomKeyword.ts";
 
-import logo from "@/public/logo.png";
+import logo from "@/public/logo.svg";
 import "./index.css";
 
 
