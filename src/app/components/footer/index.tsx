@@ -16,7 +16,7 @@ export default function Footer() {
 			</div>
 			<div id="note">
 				<span>
-					서울특별시 중구 세종대로9길 42 부영빌딩 7층 (우 04513)<br/>
+					인천광역시 부평구 무네미로 448번길 56 (우 21417)<br/>
 					대표 : 엄준식 | 연락처 : 010-XXXX-XXXX | contact@example.com<br/>
 					Not affiliated with "한국폴리텍"
 				</span>
