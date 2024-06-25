@@ -1,4 +1,4 @@
-main#register {
+main#reset {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -20,14 +20,6 @@ main#register {
 
 			border: 1px solid black;
 			border-radius: 3px;
-		}
-
-		> #agrees {
-			> label {
-				margin-left: 5px;
-
-				user-select: none;
-			}
 		}
 
 		> button {

@@ -9,9 +9,20 @@ import "./page.css";
 
 
 
-export default function Home() {
+export default function MyPage() {
 	return (
-		<main id="main">
+		<main id="my">
+			<aside>
+				<div id="hat">
+					<span>구독 중인 알림 <FaCheckCircle color="#5FA777"/></span>
+				</div>
+				<div id="shoes">
+					<ul>
+						<li>학식 알림</li>
+						<li>시간표 알림</li>
+					</ul>
+				</div>
+			</aside>
 			<div id="content">
 				<div id="next-time">
 					<span>다음 강의 : { "ChatGPT" }</span>
@@ -36,17 +47,6 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<aside>
-				<div id="hat">
-					<span>구독 중인 알림 <FaCheckCircle color="#5FA777"/></span>
-				</div>
-				<div id="shoes">
-					<ul>
-						<li>학식 알림</li>
-						<li>시간표 알림</li>
-					</ul>
-				</div>
-			</aside>
 		</main>
 	);
 }

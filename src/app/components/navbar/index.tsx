@@ -13,8 +13,6 @@ import "./index.css";
 
 
 
-const placeholder = randomKeyword();
-
 export default function Navbar() {
 	return (
 		<nav>
@@ -35,7 +33,7 @@ export default function Navbar() {
 			>
 				<input
 					type="search"
-					placeholder={placeholder}
+					placeholder={randomKeyword()}
 				/>
 				<button type="submit">
 					<FaSearch size={22}/>

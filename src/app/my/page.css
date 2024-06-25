@@ -1,0 +1,87 @@
+main#my {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: center;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+
+	margin-top: 10px;
+
+	aside {
+		width: 220px;
+		height: 300px;
+
+		padding: 10px 0 0 10px;
+	
+		#hat {
+			padding: 10px;
+
+			border-top-right-radius: 5px;
+			border-top-left-radius: 5px;
+	
+			background-color: #1D89FF;
+
+			color: white;
+		}
+
+		#shoes {
+			padding: 10px;
+
+			height: 104%;
+			
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+
+			background-color: #EEEEEE;
+	
+			ul {
+				margin: 0px;
+				padding: 0px;
+			
+				li {
+					list-style: none;
+				}
+			}
+		}
+	}
+
+	#content {
+		width: 520px;
+		height: 300px;
+
+		padding: 10px 10px 0 0;
+
+		#next-time {
+			padding: 10px;
+			margin-bottom: 10px;
+
+			background-color: #B8E9FF;
+		}
+		
+		#weather {
+			padding: 10px;
+			margin-top: 10px;
+
+			height: 100%;
+			
+			background-color: #ccd4dd;
+			text-align: center;
+	
+			#icon {
+				display: flex;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+	
+				> svg {
+					margin: 10px 20px;
+				}
+			}
+
+			#description {
+				margin-top: 10px;
+			}
+		}
+	}
+}

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 
 import Providers from "./components/providers";
+import Navbar from './components/navbar';
+import Footer from "./components/footer";
 
 import "./global.css";
 
@@ -22,7 +24,9 @@ export default function RootLayout(
 		<html lang="ko">
 			<body>
 				<Providers>
+					<Navbar/>
 					{ children }
+					<Footer/>
 				</Providers>
 			</body>
 		</html>

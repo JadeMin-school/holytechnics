@@ -33,6 +33,10 @@ nav {
 			border-right-width: 0;
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
+
+			&::-webkit-search-cancel-button {
+				display: none;
+			}
 		}
 		button {
 			width: 40px;
