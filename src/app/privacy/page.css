@@ -1,8 +1,12 @@
 main#privacy {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: nowrap;
 	align-content: center;
 	justify-content: center;
 	align-items: center;
+
+	> #description {
+		padding: 0 2rem 2rem 2rem;
+	}
 }

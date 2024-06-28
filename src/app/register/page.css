@@ -1,9 +1,11 @@
 main#register {
+	height: calc(100vh - 191px);
+
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	align-content: center;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 
 	form {

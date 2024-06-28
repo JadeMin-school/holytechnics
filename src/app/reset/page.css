@@ -1,4 +1,6 @@
 main#reset {
+	height: calc(100vh - 191px);
+
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;

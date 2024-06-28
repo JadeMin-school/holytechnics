@@ -1,10 +1,12 @@
 main#main {
+	height: calc(100vh - 201px);
+
 	display: flex;
 	flex-direction: row;
 	flex-wrap: center;
 	align-content: center;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 
 	margin-top: 10px;
 

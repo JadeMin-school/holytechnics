@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 
+import PRIVACY from "@/config/privacy.ts";
 import "./index.css";
 
 
@@ -16,8 +17,8 @@ export default function Footer() {
 			</div>
 			<div id="note">
 				<span>
-					인천광역시 부평구 무네미로 448번길 56 (우 21417)<br/>
-					대표 : 엄준식 | 연락처 : 010-XXXX-XXXX | contact@example.com<br/>
+					{PRIVACY.ADDRESS}<br/>
+					대표 : {PRIVACY.CONTACT.NAME} | 연락처 : {PRIVACY.CONTACT.PHONE} | {PRIVACY.CONTACT.EMAIL}<br/>
 					Not affiliated with "한국폴리텍"
 				</span>
 			</div>
